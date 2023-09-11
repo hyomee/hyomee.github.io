@@ -43,6 +43,7 @@
     * [공통 클래스](jpa-and-query-dsl/jpa/undefined-1.md)
     * [복합키](jpa-and-query-dsl/jpa/undefined-2.md)
     * [프록시 & 지연로딩](jpa-and-query-dsl/jpa/and.md)
+    * [@JoinTable](jpa-and-query-dsl/jpa/jointable.md)
     * [Aggregate](jpa-and-query-dsl/jpa/aggregate/README.md)
       * [Aggregate 참조](jpa-and-query-dsl/jpa/aggregate/aggregate.md)
       * [Aggregate 연관](jpa-and-query-dsl/jpa/aggregate/aggregate-1.md)
