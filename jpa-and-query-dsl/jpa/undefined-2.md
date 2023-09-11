@@ -115,7 +115,7 @@ Public class 가입별상품{
     private int 가입번호
     private String 서비스코드
     
-    @OeeToOne(mappedBy = “가입별상품”)
+    @OneToOne(mappedBy = “가입별상품”)
     private 가입별상품부가 가입별상품부가
 }
 
