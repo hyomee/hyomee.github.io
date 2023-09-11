@@ -41,7 +41,7 @@
       * [다대다 \[ N : N \]](jpa-and-query-dsl/jpa/jpa-2/n-n.md)
     * [DB 슈퍼타입](jpa-and-query-dsl/jpa/db.md)
     * [공통 클래스](jpa-and-query-dsl/jpa/undefined-1.md)
-    * [복합키](jpa-and-query-dsl/jpa/undefined-2.md)
+    * [복합키-@IdClass, @EmbeddedId](jpa-and-query-dsl/jpa/idclass-embeddedid.md)
     * [프록시 & 지연로딩](jpa-and-query-dsl/jpa/and.md)
     * [@JoinTable](jpa-and-query-dsl/jpa/jointable.md)
     * [Aggregate](jpa-and-query-dsl/jpa/aggregate/README.md)
