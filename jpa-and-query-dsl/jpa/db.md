@@ -4,7 +4,7 @@ description: DB의 슈퍼타입 서브타입 논리 모델
 
 # DB 슈퍼타입
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p>수퍼 타입/서브타입</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>수퍼 타입/서브타입</p></figcaption></figure>
 
 **논리 모델을 물리 모델로 변경시 다음과 같은 방법으로 변환합니다**.
 
@@ -14,7 +14,7 @@ description: DB의 슈퍼타입 서브타입 논리 모델
 
 **객체 모델**
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption><p>객체 모델</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>객체 모델</p></figcaption></figure>
 
 * **전략 : @Inheritance(strategy= InheritanceType)**
   * default 전략은 SINGLE\_TABLE.
@@ -27,7 +27,7 @@ description: DB의 슈퍼타입 서브타입 논리 모델
 
 ## 1. 조인 테이블
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p> 조인 테이블</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p> 조인 테이블</p></figcaption></figure>
 
 **strategy= InheritanceType.JOINED**
 
@@ -57,7 +57,7 @@ public class 영하 extends 상품 {
 
 ## 2. 단일 테이블
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>단일 테이블</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>단일 테이블</p></figcaption></figure>
 
 **strategy= InheritanceType.SINGLE\_TABLE**
 
@@ -87,7 +87,7 @@ public class 영하 extends 상품 {
 
 ## 3. 복수 테이블
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption><p>복수 테이블</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>복수 테이블</p></figcaption></figure>
 
 **strategy= InheritanceType.TABLE\_PER\_CLASS**
 
