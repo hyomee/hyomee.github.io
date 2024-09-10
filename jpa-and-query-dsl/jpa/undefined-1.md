@@ -13,7 +13,7 @@ description: '@MappedSuperclass'
 
 ## 1. 일반 적인 상속
 
-<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (263).png" alt=""><figcaption></figcaption></figure>
 
 ```java
 @Setter

@@ -11,4 +11,10 @@
 * 메트릭, 상태 확인 및 외부화된 구성과 같은 프로덕션용 기능 제공
 * 코드 생성이 전혀 필요 없으며 XML 구성이 필요하지 않습니다.
 
-글을 작성 하는 시점에 **스프링 부트는 3.1.3 Version** 이다.
+글을 작성 하는 시점에 [**스프링 부트는 3.1.3 Version**](https://docs.spring.io/spring-boot/docs/3.1.3/reference/html/) 이다.
+
+SpringBoot를 사용하기 전에 다음과 같은 선지식이 필요하다.
+
+1. JAVA ( Java 17 JDK )
+2. Spring Framework
+3. Maven 또는 Gradle

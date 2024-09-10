@@ -20,7 +20,7 @@ Spring Data JPA는 실제로 Hibernate, Jboss, EclipseLink와 같은 JPA 제공�
 
 ## 3. Spring Data JPA Repository 계층 구조
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption><p>계층 구조</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption><p>계층 구조</p></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Spring Data</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (227).png" alt=""><figcaption><p>Spring Data</p></figcaption></figure>
 

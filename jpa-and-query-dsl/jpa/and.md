@@ -6,7 +6,7 @@ JPA는 find(), getReference() 제공하며 getReference()가 가상 객체 조�
 
 준 영속성 상태에서 getReference는 예외 발생 하고,  트랜잭션 범위 밖에서 프록시 객체 조회 하는 경우 open-session-in-view 패턴을 사용해야 합니다.
 
-<table><thead><tr><th width="271">위임</th><th>동작 구조</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image.png" alt=""></td><td><img src="../../.gitbook/assets/image (2).png" alt="" data-size="original"></td></tr></tbody></table>
+<table><thead><tr><th width="271">위임</th><th>동작 구조</th></tr></thead><tbody><tr><td><img src="../../.gitbook/assets/image (206).png" alt=""></td><td><img src="../../.gitbook/assets/image (208).png" alt="" data-size="original"></td></tr></tbody></table>
 
 ## 2. 즉시 로딩/지연 로딩
 
@@ -17,7 +17,7 @@ JPA는 find(), getReference() 제공하며 getReference()가 가상 객체 조�
   * @OneToMany, @ManyToMany : optional = false : 외부 조인 : optional = true : 내부 조인
 * @ManyToOne(fetch = FetchType.LAZY)  :  지연로딩&#x20;
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption><p>지연로딩</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (209).png" alt=""><figcaption><p>지연로딩</p></figcaption></figure>
 
 ## 3. 영속성 전이
 

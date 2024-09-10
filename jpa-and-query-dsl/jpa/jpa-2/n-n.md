@@ -6,18 +6,18 @@ description: DB 입장에서는 존재 할 수 없음
 
 DB 설계시에도연 N:N 관계는 잘못된이  설계로 만들지 말아야 합니다. 이런 경우 매핑 테이블을 만들어서 설계를 해야 합니다.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>DB 매핑 관계</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (215).png" alt=""><figcaption><p>DB 매핑 관계</p></figcaption></figure>
 
 위의 DB 매핑을 객체 관계로는 N:N 단방향과 N:N 양방향으로 풀 수 있습니다.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption><p>객체 관계</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (217).png" alt=""><figcaption><p>객체 관계</p></figcaption></figure>
 
 ## 1.  N:N 단방향
 
 * @ManyToMany, @JoinTable
 * 사용자 전화번호 테이블 설정 되고 제약 조건 설정 됨
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption><p>N:N 단방항</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (218).png" alt=""><figcaption><p>N:N 단방항</p></figcaption></figure>
 
 ```java
 @Entity
@@ -36,7 +36,7 @@ public class 사용자{
 * @ManyToMany(mappedBy=“대상객체”) 설정
 * 사용자 전화번호 테이블 설정 되고 제약 조건 설정 됨
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption><p>N:N 양방향</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (219).png" alt=""><figcaption><p>N:N 양방향</p></figcaption></figure>
 
 ```java
 @Entity

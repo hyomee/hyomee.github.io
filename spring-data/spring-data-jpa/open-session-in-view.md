@@ -8,7 +8,7 @@
 * Hibernate의 session객체가 영속성 컨텍스트를 관리함
 * Transaction는 쪼갤 수 없는 업무처리의 단위로 영속성 컨텍스는 1:1:로 연결된하나의 Transaction동안 수정된 객체의 모든 상태는 영속성 컨텍스트 내에 저장 되고 종료 될 때 데이터 저장소와 동기 된다.
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (250).png" alt=""><figcaption></figcaption></figure>
 
 ## 2. Open Session In View를 이해하기 전에 알아여 할 개념&#x20;
 
@@ -34,11 +34,11 @@ Service Layer는 Application의 Transaction경계를 정의하는 역할을 하�
 4. **Spring Open Session In View** : \
    FlushMode 와 ConnectionReleaseMode의 조정을 통해 전통적인 서블릿 필터의 단점을 보안 하는 OpenSessionInViewFilter 와 OpenSessionInViewInterceptor 를 제공하여OpenSessionInViewFilter 는 필터 내에서 Session을 오픈하지만 트랜잭션은 시작하지 않음
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
 
 JSP 렌더링  오류발생  : org.hibernate.LazyInitializationException: proxy – no Session
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption><p>내부 동작</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (253).png" alt=""><figcaption><p>내부 동작</p></figcaption></figure>
 
 영속성 컨텍스트가 Detached 상태에서 사용하므로 LazyInitializationException 발생&#x20;
 
@@ -60,15 +60,15 @@ JSP 렌더링  오류발생  : org.hibernate.LazyInitializationException: proxy 
 
 ### 4-1. 일반적인 영속성 컨텍스트, 트랜젹션, 커넥션 범위
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (254).png" alt=""><figcaption></figcaption></figure>
 
 ### 4-2. Filter를 사용 한 영속성 컨텍스트, 트랜젹션, 커넥션 범위
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
 ### 4-3. Spring의 OpenSessionInViewFilter 영속성 컨텍스트, 트랜젹션, 커넥션 범위
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (256).png" alt=""><figcaption></figcaption></figure>
 
 * 영속성 컨텍스트와 트랜잭션의 경제가 틀림
 * 트랜잭션에 대한 일관성 있는 뷰를 제공 하지만 영속성 컨텍스 트에 대한 일관성 있는 뷰는 제공 하지 않음
@@ -85,11 +85,11 @@ JSP 렌더링  오류발생  : org.hibernate.LazyInitializationException: proxy 
 
 #### **4-3-1. singleSession=false 영속성 컨텍스트, 트랜젹션, 커넥션 범위**
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>singleSession=false 영속성 컨텍스트, 트랜젹션, 커넥션 범위</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (257).png" alt=""><figcaption><p>singleSession=false 영속성 컨텍스트, 트랜젹션, 커넥션 범위</p></figcaption></figure>
 
 4-3-2. Controller에서 두번 호출&#x20;
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (258).png" alt=""><figcaption></figcaption></figure>
 
 * 1\), 2) 에서 조회한 객체는 동일함
 * 만약 2)번에서 변경이 있었으면 Transaction은 두 번 실행됨

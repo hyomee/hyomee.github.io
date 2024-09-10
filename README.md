@@ -21,4 +21,6 @@ layout:
 
 개발이든 일이든 혼자하는 것이 아니라 같이 하는 것이다.
 
-*
+
+
+[개발시 발생하는 이슈 및 문제해결은 이곳에](https://hyomee.gitbook.io/solution)

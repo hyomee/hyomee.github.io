@@ -4,7 +4,7 @@ JPA는 Application과 JDBC사이에서 JDBC API를 사용하여 SQL을 호출 �
 
 #### **1. JPA 쓰기**
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption><p>JPA 쓰기</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (230).png" alt=""><figcaption><p>JPA 쓰기</p></figcaption></figure>
 
 1. 개발자 : 데이터 객체 (DAO)의 정보를 Entity 객체에 저장.
 2. JPA : Entity 분석
@@ -18,7 +18,7 @@ Hibernate: insert into member (name, id) values (?, ?
 
 #### **2. JPA 읽기**
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption><p>JPA 읽기</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (231).png" alt=""><figcaption><p>JPA 읽기</p></figcaption></figure>
 
 1. 개발자 : 조회 조건 전달
 2. JPA : Entity 매핑 정보를 바탕으로 적절한 SELECT SQL 생성
@@ -30,11 +30,11 @@ Hibernate: insert into member (name, id) values (?, ?
 Hibernate: select member0_.id as id1_0_0_, member0_.name as name2_0_0_ from member member0_ where member0_.id=?
 ```
 
-## **1. JPA 조회** <a href="#1-jpa" id="1-jpa"></a>
+## **1. JPA 조회** <a href="#id-1-jpa" id="id-1-jpa"></a>
 
 findById() 즉 테이블의 pk를 사용해서 조회 요청을 하면 JPA는1차 Cache의 Entity에 데이터가 있으면 DB조회 없이 데이터를 반환합니다.
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption><p>JPA 조회</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (232).png" alt=""><figcaption><p>JPA 조회</p></figcaption></figure>
 
 1. findById()로 조회 요청 ( id = 1 )
 2. 1차 Cache 검색 후 데이터가 없으면
@@ -62,11 +62,11 @@ JpaRunner - Member1 : Member(id=1, name=홍길동)
 
 ```
 
-## **2. JPA 저장** <a href="#2-jpa" id="2-jpa"></a>
+## **2. JPA 저장** <a href="#id-2-jpa" id="id-2-jpa"></a>
 
 EntityManagement에 persist()로 저장 요청을 하면 Insert SQL을 생성 하여 쓰기 지연 SQL 저장소에 저장하고 1차 Cache에 정보를 보관 한 후 flush()를 통해 DB와 동기화 한다 . 최종 commit() 요청을 통해 DB에 저장된다.
 
-<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption><p>JPA 저장</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (233).png" alt=""><figcaption><p>JPA 저장</p></figcaption></figure>
 
 1. 개발자 : 사용자 A를 영속성 컨텍스트에 저장 요청을 한다. (persist)
 2. JPA : 사용자 A를 Insert Query 생성 후 쓰기 지연 SQL 저장소에 저장하고 영속성 컨텍스트에 등록한다.
@@ -77,7 +77,7 @@ EntityManagement에 persist()로 저장 요청을 하면 Insert SQL을 생성 �
 7. 개발자 : DB 저장 요청 (commit)
 8. JPA : DB에 정보를 최종 저장. ( 최종 DB에 반영 됨 )
 
-<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption><p>로그 확인</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption><p>로그 확인</p></figcaption></figure>
 
 entityManager.persist(memberA), entityManager.persist(memberB) 시 쿼리 생성이 되고 entityManager.flush() 시 동기화 되는 것을 확인할 수 있다.
 
@@ -89,11 +89,11 @@ entityManager.persist(memberA), entityManager.persist(memberB) 시 쿼리 생성
 2. Entity룰 읽어서 쿼리 작성 후 쓰기 지연 SQL 저장소 저장
 3. DB와 상태 동기화 : DB에 반영 되지는 않음, 영속성 컨텍스트는 지워지지 않음
 
-## **3. JPA 수정** <a href="#3-jpa" id="3-jpa"></a>
+## **3. JPA 수정** <a href="#id-3-jpa" id="id-3-jpa"></a>
 
 Entity 객체에 값을 넣으면 Entity 스냅샷과 비교하여 변경된 쿼리로 쓰기 지연 저장소에 정보룰 변경하고 flush(), commit()을 통해서 DB에 저장된다.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption><p>JPA 수정 과정</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (235).png" alt=""><figcaption><p>JPA 수정 과정</p></figcaption></figure>
 
 1. 개발자 : Entity 객체에 set
 2. JPA : Entity 스냅샷과 비교하여 쿼리 생성 후 쓰기 지연 저장소에 저장
@@ -102,16 +102,16 @@ Entity 객체에 값을 넣으면 Entity 스냅샷과 비교하여 변경된 쿼
 5. 개발자 : DB 저장 요청 (commit)
 6. JPA : DB에 정보를 최종 저장. ( 최종 DB에 반영 됨 )
 
-<figure><img src="../../.gitbook/assets/image (26).png" alt=""><figcaption><p>로그 확인</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (236).png" alt=""><figcaption><p>로그 확인</p></figcaption></figure>
 
-## **4. JPA Detach** <a href="#4-jpa-detach" id="4-jpa-detach"></a>
+## **4. JPA Detach** <a href="#id-4-jpa-detach" id="id-4-jpa-detach"></a>
 
 영속성 컨텍스트에서 준 영속성 상태로 전환하는 기능이다.
 
-<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption><p>Detach 과정</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption><p>Detach 과정</p></figcaption></figure>
 
-## **5. JPA Remove** <a href="#5-jpa-remove" id="5-jpa-remove"></a>
+## **5. JPA Remove** <a href="#id-5-jpa-remove" id="id-5-jpa-remove"></a>
 
 삭제 기능으로 영속성 컨텍스트 동작은 동일하다.
 
-<figure><img src="../../.gitbook/assets/image (28).png" alt=""><figcaption><p>삭제 과정</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption><p>삭제 과정</p></figcaption></figure>

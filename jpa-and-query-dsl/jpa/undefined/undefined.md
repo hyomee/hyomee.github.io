@@ -2,7 +2,7 @@
 
 객체의 관계를 한 쪽 방향으로만 연관관계를 설정하는 것이다.
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption><p>DB, 객체 연관</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (229).png" alt=""><figcaption><p>DB, 객체 연관</p></figcaption></figure>
 
 * DB : 테이블과 데이블을 JOIN을 통해서 양방향 관계 설정
   * 사용자  입장 : 사용자는 조직을 가지고 있음&#x20;

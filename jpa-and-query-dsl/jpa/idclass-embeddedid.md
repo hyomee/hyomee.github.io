@@ -1,4 +1,4 @@
-# 복합키
+# 복합키-@IdClass, @EmbeddedId
 
 JPA에서 복합키는 @IdClass, @EmbeddedId 두 가지 방식을 제공 합니다.
 
@@ -10,9 +10,9 @@ JPA에서 복합키는 @IdClass, @EmbeddedId 두 가지 방식을 제공 합니�
 
 다음은 @IdClass, @EmbeddedId에 예제에 사용할 모델 입니다.
 
-| DB                                          | 객체 관계                                       |
-| ------------------------------------------- | ------------------------------------------- |
-| ![](<../../.gitbook/assets/image (55).png>) | ![](<../../.gitbook/assets/image (56).png>) |
+| DB                                           | 객체 관계                                        |
+| -------------------------------------------- | -------------------------------------------- |
+| ![](<../../.gitbook/assets/image (265).png>) | ![](<../../.gitbook/assets/image (266).png>) |
 
 ## &#x20;1. @IdClass
 
@@ -90,7 +90,7 @@ Public class 가입별상품{
 
 다음과 같은 모델을 생각해 봅니다.
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption><p>가입별 상픔</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (267).png" alt=""><figcaption><p>가입별 상픔</p></figcaption></figure>
 
 가입자는 상품을 여러 개 가지고 있으면 각 상품은 고유의 부가 정보를 가지고 있는 것을 모델로 정의 하면 위와 같은 모델이 나옵니다. 몰론 방법은 다양하지만 복합키 연관을 위해 작성한 예 입니다.
 

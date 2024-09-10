@@ -2,7 +2,7 @@
 
 객체 관계를 양쪽 방향으로 연돤 관계를 설정하는 것으로 꼭 필요할 때만 사용해여 한다.
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption><p>양방향 관계</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (228).png" alt=""><figcaption><p>양방향 관계</p></figcaption></figure>
 
 객체는 양방향이 없으므로 사용자 관점, 조직 관점을 고려해서 주인 객체를 지정해야 한다. 즉 객체 관계를 만들때 **주인이 되는 객체를 우선 선정**하여 코드 작성을 해야 한다.
 
